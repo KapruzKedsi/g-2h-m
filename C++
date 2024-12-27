@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+int main() {
+    float Height,Slope,SlopeSq,GravAc,ErrorPer;
+    cout << "Height"<<endl;
+    cin >>Height;
+    cout <<"Slope"<<endl;
+    cin >>Slope;
+    SlopeSq =Slope*Slope;
+    GravAc=2*Height/SlopeSq;
+    cout <<GravAc<<endl;
+    ErrorPer=((9.81-GravAc)/9.81)*100;
+    if (ErrorPer<0){
+        ErrorPer= -ErrorPer;
+    }
+    cout<<"Error percentage is: "<<ErrorPer;
+    return 0;
+}
